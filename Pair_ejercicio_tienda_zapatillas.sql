@@ -52,7 +52,7 @@ ADD COLUMN marca VARCHAR(45) NOT NULL,
 ADD COLUMN talla INT NOT NULL;
 
 SELECT * 
-	FROM Zapatillas
+	FROM Zapatillas;
 
 ALTER TABLE Empleados
 MODIFY COLUMN salario FLOAT;
@@ -69,7 +69,7 @@ VALUES("XQYUN", "Negro", "Nike", 42),
 ("OPNYT", "Verdes", "Adidas", 35);
 
 SELECT * 
-	FROM Zapatillas
+	FROM Zapatillas;
     
  INSERT INTO empleados (nombre, tienda, salario, fecha_incorporacion)
  VALUES("Laura","Alcobendas",25987,"2010-09-03"),
@@ -82,26 +82,28 @@ SELECT *
  ("Carmen", 28938432,"carmen@email.com", "Calle del Color", "Vigo", "Pontevedra", "23456");
 
 SELECT * 
-	FROM clientes
+	FROM clientes;
 
 INSERT INTO facturas (numero_factura, fecha, id_zapatilla, id_empleado, id_cliente, total)
 VALUES (123,"2001-12-11",1,2,1,54.98),
 (1234,"2005-05-23",1,1,3,89.91),
 (12345,"2015-09-18",2,3,3,76.23);
 
+-- SET SQL_SAFE_UPDATES = 0;
+
 UPDATE zapatillas
 SET color = "Amarillas"
-WHERE id_zapatilla =2;
+WHERE color ="Rosas";
 
 SELECT * 
-	FROM Zapatillas
+	FROM Zapatillas;
     
 UPDATE empleados
 SET tienda = "A Coruña"
 WHERE id_empleado = 1;
 
 SELECT * 
-	FROM empleados
+	FROM empleados;
     
 UPDATE clientes
 SET numero_telefono = "25698745"
@@ -110,3 +112,4 @@ WHERE id_cliente = 1;
 UPDATE facturas
 SET total = 89.91
 WHERE id_Zapatilla = 2;
+
